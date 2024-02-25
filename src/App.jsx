@@ -117,7 +117,6 @@ function App() {
           rotation={rotation}
           offset={offset}
           faceURL={cachedImages[code]}
-          backURL={cachedImages['back']}
           suit={suit}
           value={value}
           zIndex={idx + 1}

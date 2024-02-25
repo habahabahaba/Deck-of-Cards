@@ -10,7 +10,6 @@ import backImg from '../../assets/back.png';
 export default function Card({
   suit,
   value,
-  backURL,
   faceURL,
   offset,
   rotation,
@@ -74,7 +73,6 @@ export default function Card({
 Card.propTypes = {
   suit: PropTypes.string,
   value: PropTypes.string,
-  backURL: PropTypes.string,
   faceURL: PropTypes.string,
   offset: PropTypes.arrayOf(PropTypes.number),
   rotation: PropTypes.number,
