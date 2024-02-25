@@ -4,6 +4,8 @@ import { useEffect, useState, useContext } from 'react';
 import animationContext from '../../Context/animationContext';
 // PropTypes:
 import PropTypes from 'prop-types';
+// Images:
+import back from '../../assets/back.png';
 
 export default function Card({
   suit,
@@ -44,7 +46,7 @@ export default function Card({
       className='card back'
       style={{
         zIndex: `${zIndex}`,
-        backgroundImage: `url(${backURL})`,
+        backgroundImage: `url(${'./assets/back.png'})`,
       }}
     />
   );
