@@ -5,7 +5,7 @@ import cardsApiContext from './Context/cardsApiContext';
 import animationContext from './Context/animationContext';
 // Components:
 import Button from './Components/UI/Button';
-import ToggleField from './Components/ToggleField';
+import ToggleField from './Components/UI/ToggleField';
 import Card from './Components/UI/Card';
 //CSS:
 import './App.css';
