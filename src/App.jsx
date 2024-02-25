@@ -116,7 +116,8 @@ function App() {
         <Card
           rotation={rotation}
           offset={offset}
-          imageURL={cachedImages[code]}
+          faceURL={cachedImages[code]}
+          backURL={cachedImages['back']}
           suit={suit}
           value={value}
           zIndex={idx + 1}

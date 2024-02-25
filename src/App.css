@@ -149,7 +149,7 @@ button:focus {
   border-radius: 5%;
 
   &.back {
-    background-image: url('./assets/back.png');
+    /* background-image: url('./assets/back.png'); */
     box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.2);
     transform: rotateY(91deg);
     animation: tilt-card-back 1000ms ease-out;

@@ -8,7 +8,8 @@ import PropTypes from 'prop-types';
 export default function Card({
   suit,
   value,
-  imageURL,
+  backURL,
+  faceURL,
   offset,
   rotation,
   zIndex,
@@ -43,6 +44,7 @@ export default function Card({
       className='card back'
       style={{
         zIndex: `${zIndex}`,
+        backgroundImage: `url(${backURL})`,
       }}
     />
   );
@@ -54,7 +56,7 @@ export default function Card({
       style={{
         transform: `rotate(${rotation}deg) rotateY(0deg) translate(${x}%, ${y}% )`,
         zIndex: `${zIndex}`,
-        backgroundImage: `url(${imageURL})`,
+        backgroundImage: `url(${faceURL})`,
       }}
     />
   );
@@ -70,7 +72,8 @@ export default function Card({
 Card.propTypes = {
   suit: PropTypes.string,
   value: PropTypes.string,
-  imageURL: PropTypes.string,
+  backURL: PropTypes.string,
+  faceURL: PropTypes.string,
   offset: PropTypes.arrayOf(PropTypes.number),
   rotation: PropTypes.number,
   zIndex: PropTypes.number,

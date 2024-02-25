@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 const BASE_URL = 'https://deckofcardsapi.com/api/deck';
 const SVG_BASE_URL = 'https://deckofcardsapi.com/static/img';
 
-const cachedImages = { back: './assets/back.png' };
+const cachedImages = { back: 'src/assets/back.png' };
 
 export default function CardsApiProvider({ children }) {
   const [deckId, setDeckId] = useState(null);
