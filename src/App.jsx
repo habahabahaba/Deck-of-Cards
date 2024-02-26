@@ -159,9 +159,7 @@ function App() {
         {drawnCards.length ? pile : null}
         <div className='status'>
           <span>{`# preloaded cards: ${loadedCards.length}`}</span>
-          <span>{`# cached images: ${
-            Object.keys(cachedImages).length - 1
-          }`}</span>
+          <span>{`# cached images: ${Object.keys(cachedImages).length}`}</span>
           <span>{`# cards dealt: ${drawnCards.length}`}</span>
           <span>{`# cards left: ${52 - drawnCards.length}`}</span>
         </div>
