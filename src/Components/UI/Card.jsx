@@ -4,8 +4,6 @@ import { useEffect, useState, useContext } from 'react';
 import animationContext from '../../Context/animationContext';
 // PropTypes:
 import PropTypes from 'prop-types';
-// Images:
-// import backURL from '../../assets/back.png';
 
 export default function Card({
   suit,
@@ -20,12 +18,6 @@ export default function Card({
   const [faceUp, setFaceUp] = useState(false);
   const [firstRender, setFirstRender] = useState(true);
   //   console.log('from Card, image:', image);
-
-  //   // Preloading card back image:
-  //   useEffect(() => {
-  //     const backImg = new Image();
-  //     backImg.src = backURL;
-  //   }, []);
 
   useEffect(() => {
     if (animate) {
