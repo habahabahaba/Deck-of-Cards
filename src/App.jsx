@@ -7,6 +7,8 @@ import animationContext from './Context/animationContext';
 import Button from './Components/UI/Button';
 import ToggleField from './Components/UI/ToggleField';
 import Card from './Components/UI/Card';
+// Images:
+import backURL from './assets/back.png';
 //CSS:
 import './App.css';
 
@@ -24,8 +26,14 @@ function App() {
   } = useContext(cardsApiContext);
   const { setAnimate } = useContext(animationContext);
 
+  // Preloading card back image:
   useEffect(() => {
-    // Get deck id and pre-load 13 cards;
+    const backImg = new Image();
+    backImg.src = backURL;
+  }, []);
+
+  // Get deck id and pre-load 13 cards;
+  useEffect(() => {
     getNewDeck()
       .then((id) => getNCards(13, id))
       .then((newCards) => {
@@ -40,6 +48,7 @@ function App() {
     };
   }, [getNewDeck, getNCards, setLoadedCards]);
 
+  // Wait for cards to preload:
   useEffect(() => {
     const cardsDrawn = drawnCards.length;
     if (cardsDrawn < 50 && cardsDrawn >= loadedCards.length - 2) {
@@ -117,6 +126,7 @@ function App() {
           rotation={rotation}
           offset={offset}
           faceURL={cachedImages[code]}
+          backURL={backURL}
           suit={suit}
           value={value}
           zIndex={idx + 1}

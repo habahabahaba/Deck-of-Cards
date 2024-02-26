@@ -5,11 +5,12 @@ import animationContext from '../../Context/animationContext';
 // PropTypes:
 import PropTypes from 'prop-types';
 // Images:
-import backURL from '../../assets/back.png';
+// import backURL from '../../assets/back.png';
 
 export default function Card({
   suit,
   value,
+  backURL,
   faceURL,
   offset,
   rotation,
@@ -20,11 +21,11 @@ export default function Card({
   const [firstRender, setFirstRender] = useState(true);
   //   console.log('from Card, image:', image);
 
-  // Preloading card back image:
-  useEffect(() => {
-    const backImg = new Image();
-    backImg.src = backURL;
-  }, []);
+  //   // Preloading card back image:
+  //   useEffect(() => {
+  //     const backImg = new Image();
+  //     backImg.src = backURL;
+  //   }, []);
 
   useEffect(() => {
     if (animate) {
@@ -79,6 +80,7 @@ export default function Card({
 Card.propTypes = {
   suit: PropTypes.string,
   value: PropTypes.string,
+  backURL: PropTypes.string,
   faceURL: PropTypes.string,
   offset: PropTypes.arrayOf(PropTypes.number),
   rotation: PropTypes.number,
