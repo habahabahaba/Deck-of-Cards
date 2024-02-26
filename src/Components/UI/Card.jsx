@@ -5,7 +5,7 @@ import animationContext from '../../Context/animationContext';
 // PropTypes:
 import PropTypes from 'prop-types';
 // Images:
-import backImg from '../../assets/back.png';
+import backURL from '../../assets/back.png';
 
 export default function Card({
   suit,
@@ -19,6 +19,12 @@ export default function Card({
   const [faceUp, setFaceUp] = useState(false);
   const [firstRender, setFirstRender] = useState(true);
   //   console.log('from Card, image:', image);
+
+  // Preloading card back image:
+  useEffect(() => {
+    const backImg = new Image();
+    backImg.src = backURL;
+  }, []);
 
   useEffect(() => {
     if (animate) {
@@ -45,7 +51,7 @@ export default function Card({
       className='card back'
       style={{
         zIndex: `${zIndex}`,
-        backgroundImage: `url(${backImg})`,
+        backgroundImage: `url(${backURL})`,
       }}
     />
   );
